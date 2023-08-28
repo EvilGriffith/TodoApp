@@ -47,7 +47,7 @@
     border: 2px solid white;
 }
 .buttonaddtask{
-    background-image: url("public/plus.png");
+    background-image: url("./public/plus.png");
     background-size: 80%;
     background-position: center;
     width: 15%;
@@ -180,7 +180,7 @@
 .editbut{
   width: 15px;
   height: 15px;
-  background-image: url("public/edit.png");
+  background-image: url(",/public/edit.png");
   background-size: cover;
   background-position: center;
   margin-left: 30x;
@@ -204,7 +204,7 @@
 .recyclebin{
   width: 15px;
   height: 15px;
-  background-image:url("public/recyclebin.png");
+  background-image:url("./public/recyclebin.png");
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
