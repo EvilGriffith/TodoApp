@@ -99,12 +99,12 @@ function TodoApp() {
         {
           task.map((value: taskobject,index:number) => {
           return(
-            <div className="task" key={index} style={{width:"90%",height:"50px"}}>
+            <div className="task" key={index} style={{width:"90%",height:"50px",transition:"0.3s ease-in"}}>
               <label className="radio-button" onClick={() => {labelclick(value)}}>
-                <input type="radio" className="checkbox" />
-                <div className="radio-circle" style={value.isComplited ? {backgroundColor:"black"} : {backgroundColor:"#434343"}}></div>
+              <div className="radio-circle" style={value.isComplited ? {backgroundColor:"black",transition:"0.3s ease-in-out"} : {backgroundColor:"#434343"}}/>
+                <input type="radio" className="radioinput" />
               </label><div className="index">{index + 1}
-                </div>{editbutpress ? <div className="title" style={value.isComplited ? {textDecoration: "line-through", color:"#aaa", userSelect: "none"} : {textDecoration: "none"}}>{value.title}</div> : <input className="editinput" autoFocus key={index} placeholder="Write here to change" onChange={changeeditvalue}  onKeyDown={(event) => {if(event.key == "Enter") succeseditvalue(value)}}></input>}
+                </div>{editbutpress ? <div className="title" style={value.isComplited ? {textDecoration: "line-through", color:"#aaa", userSelect: "none"} : {textDecoration: "none"}}>{value.title}</div> : <input className="editinput" autoFocus key={index} placeholder="Write here to change" onChange={changeeditvalue}  onKeyDown={(event) => {if(event.key == "Enter") succeseditvalue(value)}}/>}
               <div className="editbut" onClick={seteditbutbool}/>
               <div className="recyclebin" onClick={()=>{deletetask(value)}}/>
               <div className="time">{value.dateAdd}</div>

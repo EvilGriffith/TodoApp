@@ -67,8 +67,8 @@
     color:white;
 }
 .task{
-    height: 50px;
-    width: 90%;
+    height: 0;
+    width: 0;
     background-color: #434343;
     margin-left: 5%;
     margin-top: 5px;
@@ -94,59 +94,36 @@
     font-size: 11px;
     user-select: none;
 }
-.radio-button {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    width: 25px;
-    height: 20px;
-    justify-content: center;
-    margin-left: 10px;
-  }
-  
-  .radio-button input[type="radio"] {
-    display: none;
-  }
-  
-  .radio-circle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid black;
-    margin-right: 10px;
-  }
-  .radio-circle:hover{
-    background-color: #aaa;
-  }
-  
-  .radio-circle::before {
-    content: "";
-    display: block;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 16%;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .radio-label {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .radio-button:hover .radio-circle {
-    border-color: #aaa;
-  }
-  
-  .radio-button:hover input[type="radio"]:checked + .radio-circle::before {
-    background-color: #aaa;
-  }
-  .index{
-    font-size: 11px;
-    margin-left: 5px;
-  }
+.radio-button{
+  width: 11px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in;
+}
+.radio-circle{
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5px;
+  border-radius: 50%;
+}
+.radioinput{
+  display: none;
+}
+.radio-button:hover{
+  cursor:pointer;
+}
+.index{
+  font-size: 11px;
+  margin-left: 10px;
+}
 .buttonlist{
   width: 300px;
   height: 60px;
