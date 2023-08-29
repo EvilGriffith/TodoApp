@@ -48,9 +48,18 @@ function TodoApp() {
   const changevalue = (event: React.FormEvent<HTMLInputElement>) => {
     setInputValue(event.currentTarget.value)
   }
-  const labelclick = (el:taskobject) => {
-    el.isComplited = true
+  const labelclick:any = (value:taskobject) => {
+    value.isComplited = true
     setbutbool(!butbool)
+    setTimeout(() =>{
+    const complitetask  = task.filter((value) => {return value.isComplited})
+    const notcomplitetask = task.filter((value) => {return !value.isComplited})
+    let sortedtask = Object.assign([])
+    sortedtask.push(...notcomplitetask)
+    sortedtask.push(...complitetask)
+    settask(sortedtask)
+  },1000)
+    event?.preventDefault()
   }
   const cleartask:MouseEventHandler = () => {
     const flitredtask = task.filter((value) => {return !value.isComplited})
