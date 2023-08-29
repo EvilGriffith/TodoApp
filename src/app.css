@@ -131,10 +131,6 @@
     transition: all 0.2s ease-in-out;
   }
   
-  .radio-button input[type="radio"]:checked + .radio-circle::before {
-    background-color: black;
-  }
-  
   .radio-label {
     font-size: 16px;
     font-weight: bold;

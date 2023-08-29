@@ -102,7 +102,7 @@ function TodoApp() {
             <div className="task" key={index} style={{width:"90%",height:"50px"}}>
               <label className="radio-button" onClick={() => {labelclick(value)}}>
                 <input type="radio" className="checkbox" />
-                <div className="radio-circle"></div>
+                <div className="radio-circle" style={value.isComplited ? {backgroundColor:"black"} : {backgroundColor:"#434343"}}></div>
               </label><div className="index">{index + 1}
                 </div>{editbutpress ? <div className="title" style={value.isComplited ? {textDecoration: "line-through", color:"#aaa", userSelect: "none"} : {textDecoration: "none"}}>{value.title}</div> : <input className="editinput" autoFocus key={index} placeholder="Write here to change" onChange={changeeditvalue}  onKeyDown={(event) => {if(event.key == "Enter") succeseditvalue(value)}}></input>}
               <div className="editbut" onClick={seteditbutbool}/>
