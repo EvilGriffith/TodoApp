@@ -144,6 +144,7 @@
   margin-right: auto;
   margin-top:10px;
   transition:0.3s ease-in;
+  font-size: 12px;
 }
 .cleartask:hover{
   background-color: black;
